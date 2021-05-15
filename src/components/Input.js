@@ -10,6 +10,8 @@ const Input = ({ list, updateList }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input type='text' value={currentInput} onChange={(e) => setCurrentInput(e.target.value)} />
+
+            <button type='submit'>Add to Waitlist</button>
         </form>
     )
 }
