@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Input list={waitingList} updateList={setWaitingList} />
+      <h1>People Waiting</h1>
       <List waiting={waitingList} />
     </div>
   );
