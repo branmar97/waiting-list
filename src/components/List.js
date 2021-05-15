@@ -1,7 +1,11 @@
-const List = () => {
+const List = ({ waiting }) => {
+    const addPerson = (name, id) => {
+        return <li key={id}>{name}</li>
+    }
+    
     return (
         <ul>
-            <li></li>
+            {waiting.map((person, index) => addPerson(person, index))}
         </ul>
     )
 }
