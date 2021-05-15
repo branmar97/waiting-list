@@ -6,6 +6,10 @@ import List from './components/List';
 function App() {
   const [waitingList, setWaitingList] = useState([])
 
+  const updateList = (name) => {
+    setWaitingList([...waitingList, name])
+  }
+
   return (
     <div className="App">
       <Input />
