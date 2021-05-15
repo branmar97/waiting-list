@@ -4,11 +4,11 @@ const Input = ({ list, updateList }) => {
     const [currentInput, setCurrentInput] = useState("")
     
     const handleSubmit = () => {
-        updateList(list.push(currentInput))
+        updateList([...list, currentInput])
     }
 
     return (
-        <form onSubmit={handleSubmit()}>
+        <form onSubmit={handleSubmit}>
             <input type='text' value={currentInput} onChange={(e) => setCurrentInput(e.target.value)} />
         </form>
     )
