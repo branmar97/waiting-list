@@ -1,10 +1,14 @@
 import { useState } from "react";
 
-const Input = ({ updateList }) => {
+const Input = ({ list, updateList }) => {
     const [currentInput, setCurrentInput] = useState("")
     
+    const handleSubmit = () => {
+        updateList(list.push(currentInput))
+    }
+
     return (
-        <form onSubmit={updateList(currentInput)}>
+        <form onSubmit={handleSubmit()}>
             <input type='text' value={currentInput} onChange={(e) => setCurrentInput(e.target.value)} />
         </form>
     )
