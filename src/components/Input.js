@@ -3,7 +3,8 @@ import { useState } from "react";
 const Input = ({ list, updateList }) => {
     const [currentInput, setCurrentInput] = useState("")
     
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault()
         updateList([...list, currentInput])
     }
 
