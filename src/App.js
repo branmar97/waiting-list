@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Input />
-      <List />
+      <List waiting={waitingList} />
     </div>
   );
 }
