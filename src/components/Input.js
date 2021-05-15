@@ -6,6 +6,7 @@ const Input = ({ list, updateList }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         updateList([...list, currentInput])
+        setCurrentInput("")
     }
 
     return (
