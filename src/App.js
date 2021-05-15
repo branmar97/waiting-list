@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <Input />
+      <Input updateList={updateList} />
       <List waiting={waitingList} />
     </div>
   );
