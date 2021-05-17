@@ -13,4 +13,9 @@ describe("rendering components", () => {
 
         expect(queryByTestId("list-ul")).toBeTruthy();
     })
+    it("contains li", () => {
+        const { queryByTestId } = render(<List waiting={names} />)
+
+        expect(queryByTestId("list-li-0")).toBeTruthy();
+    })
   });
