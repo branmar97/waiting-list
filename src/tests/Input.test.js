@@ -16,4 +16,10 @@ describe("rendering components", () => {
 
         expect(queryByTestId("input-field")).toBeTruthy();
     })
+    it("contains submit button with placeholder", () => {
+        const { queryByTestId, queryByPlaceholderText } = render(<Input />);
+
+        expect(queryByTestId("button")).toBeTruthy();
+        expect(queryByPlaceholderText("Add to Waitlist")).toBeTruthy();
+    })
   });
