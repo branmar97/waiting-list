@@ -1,6 +1,6 @@
 const List = ({ waiting }) => {
     const addPerson = (name, id) => {
-        return <li data-testid="list-li" key={id}>{name}</li>
+        return <li data-testid={`list-li-${id}`} key={id}>{name}</li>
     }
     
     return (
