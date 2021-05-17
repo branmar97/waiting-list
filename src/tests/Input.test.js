@@ -7,8 +7,13 @@ describe("rendering components", () => {
       render(<Input />);
     });
     it("contains Input form", () => {
-        const { queryByTestId } = render(<Input />)
+        const { queryByTestId } = render(<Input />);
 
-        expect(queryByTestId("input-form")).toBeTruthy()
+        expect(queryByTestId("input-form")).toBeTruthy();
     });
+    it("contains input field", () => {
+        const { queryByTestId } = render(<Input />);
+
+        expect(queryByTestId("input-field")).toBeTruthy();
+    })
   });
