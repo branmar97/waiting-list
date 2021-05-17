@@ -8,4 +8,9 @@ describe("rendering components", () => {
     it("renders List component without crashing", () => {
       render(<List waiting={names} />);
     });
+    it("contains ul element", () => {
+        const { queryByTestId } = render(<List waiting={names} />)
+
+        expect(queryByTestId("list-ul")).toBeTruthy();
+    })
   });
