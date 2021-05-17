@@ -11,9 +11,9 @@ const Input = ({ list, updateList }) => {
 
     return (
         <form data-testid="input-form" onSubmit={handleSubmit}>
-            <input type='text' value={currentInput} onChange={(e) => setCurrentInput(e.target.value)} />
+            <input data-testid="input-field" type='text' value={currentInput} onChange={(e) => setCurrentInput(e.target.value)} />
 
-            <button type='submit'>Add to Waitlist</button>
+            <button data-testid="button" type='submit'>Add to Waitlist</button>
         </form>
     )
 }
