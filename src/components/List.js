@@ -1,10 +1,10 @@
 const List = ({ waiting }) => {
     const addPerson = (name, id) => {
-        return <li key={id}>{name}</li>
+        return <li data-testid="list-li" key={id}>{name}</li>
     }
     
     return (
-        <ul>
+        <ul data-testid="list-ul">
             {waiting.map((person, index) => addPerson(person, index))}
         </ul>
     )
