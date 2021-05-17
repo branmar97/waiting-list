@@ -1,13 +1,11 @@
 # Waiting List
 
-A test app using Jest and Enzyme for Test-Driven-Developlment (TDD).
+A test app using the React Testing Library.
 
 ## Technologies
 
 - JavaScript
 - ReactJS
-- Jest
-- EnzymeJS
 
 ---
 
