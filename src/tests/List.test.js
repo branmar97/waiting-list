@@ -1,12 +1,11 @@
 import React from 'react';
 import List from '../components/List';
-import { shallow, mount } from 'enzyme';
-import toJson from "enzyme-to-json";
+import { render, fireEvent } from '@testing-library/react';
 
 const names = ['Wilma', 'Emily', 'Carter'];
 
 describe("rendering components", () => {
     it("renders List component without crashing", () => {
-      shallow(<List waiting={names} />);
+      render(<List waiting={names} />);
     });
   });
