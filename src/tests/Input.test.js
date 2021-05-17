@@ -23,3 +23,15 @@ describe("rendering components", () => {
         expect(queryByPlaceholderText("Add to Waitlist")).toBeTruthy();
     })
   });
+
+  describe("input value", () => {
+    it("updates on change", () => {
+        const { queryByPlaceholderText } = render(<Input />);
+
+        const nameInput = queryByPlaceholderText("Name");
+
+        fireEvent.change(nameInput, {target: {value: "Test"}});
+
+        expect(nameInput.value).toBe("Test");
+    })
+  });
